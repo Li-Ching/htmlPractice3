@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<script>
+    var imgs = new Array(4)
+    window.onload = function img() {
+        var picname = new Array(10)
+        var i = 0;
+        picname[0] = "./images/0.jpg"; picname[1] = "./images/1.jpg";
+        picname[2] = "./images/2.jpg"; picname[3] = "./images/3.jpg";
+        picname[4] = "./images/4.jpg"; picname[5] = "./images/5.jpg";
+        picname[6] = "./images/6.jpg"; picname[7] = "./images/7.jpg";
+        picname[8] = "./images/8.jpg"; picname[9] = "./images/9.jpg";
+        var which = Math.floor(Math.random() * 100) % 10;
+        a.src = picname[which];
+        imgs[i++] = which;
+        which = Math.floor(Math.random() * 100) % 10;
+        b.src = picname[which];
+        imgs[i++] = which;
+        which = Math.floor(Math.random() * 100) % 10;
+        c.src = picname[which];
+        imgs[i++] = which;
+        which = Math.floor(Math.random() * 100) % 10;
+        d.src = picname[which];
+        imgs[i++] = which;
+    }
+    function check() {
+        if (document.forms[0].passwd.value == imgs.join("") ){
+            alert("輸入正確");
+        }
+        else {
+            alert("輸入錯誤");
+        }
+    }
+</script>
+<html lang="ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>A9210256作業7</title>
+</head>
+
+<body>
+    圖片
+    <img name="a" style="height: 40px;">
+    <img name="b" style="height: 40px;">
+    <img name="c" style="height: 40px;">
+    <img name="d" style="height: 40px;">
+    <Form name="form1">
+        請輸入上圖的數字
+        <input type="text" name="passwd" id="passwd">
+        <input type="button" value="確定" onClick="check()">
+    </Form>
+
+</body>
+</html>
